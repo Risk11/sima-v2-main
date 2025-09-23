@@ -18,7 +18,7 @@ const CardTotal: React.FC<CardProps> = ({
   iconColor
 }) => {
   return (
-    <div className={`bg-white text-left rounded-lg border border-slate-300 mt-1 p-2 ${className}`}>
+    <div className={`bg-white text-left rounded-lg border border-2 border-sky-300 mt-1 p-2 ${className}`}>
       <div className="flex items-center gap-2">
         {Icon && <Icon className={`w-5 h-5 ${iconColor}`} />} {/* ikon opsional */}
         <p className={`font-semibold text-md ${textColor ?? "text-[#383737]"} font-poppins`}>

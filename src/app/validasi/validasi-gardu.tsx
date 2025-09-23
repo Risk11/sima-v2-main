@@ -221,10 +221,14 @@ export default function ValidasiGardu() {
   return (
     <SidebarProvider className="font-poppins">
       <AppSidebar className="w-[200px] " />
-      <SidebarInset className="bg-gradient-to-b from-[#FCFCFC] to-[#D9E3EA]">
+      <SidebarInset className="bg-white">
       <Header/>
           <div className="flex gap-2 justify-center">
-            <CardTotal total="345.200" description="Total Pelanggan" textColor="text-green-600" />
+            <CardTotal 
+              total="345.200" 
+              description="Total Pelanggan" 
+              textColor="text-white" 
+              className='bg-sky-300'/>
             <CardTotal total="345" description="Total Dil" />
             <CardTotal total="1.200" description="Total Data Tidak DIL" />
             <CardTotal total="589" description="Total Data Dikunci" />

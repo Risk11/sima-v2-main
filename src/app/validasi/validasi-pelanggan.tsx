@@ -144,7 +144,7 @@ const FilterPelanggan = ({ initialFilters, onApplyFilters, isFetching }: { initi
         {statusDilOptions.map((o) => (<option key={o} value={o}>{o.replace(/_/g, " ")}</option>))}
       </select>
       <div className="flex items-end space-x-2">
-        <Button onClick={handleApply} className="w-full" disabled={isFetching}><Search className="mr-2 h-4 w-4" /> {isFetching ? 'Mencari...' : 'Cari'}</Button>
+        <Button onClick={handleApply} className="w-full bg-sky-500 hover:bg-sky-400" disabled={isFetching}><Search className="mr-2 h-4 w-4" /> {isFetching ? 'Mencari...' : 'Cari'}</Button>
         <Button variant="outline" onClick={handleReset} className="w-full" disabled={isFetching}><RotateCcw className="mr-2 h-4 w-4" /> Reset</Button>
       </div>
     </div>
@@ -524,7 +524,7 @@ export default function ValidasiPelangganPage() {
   return (
     <SidebarProvider className="font-poppins">
       <AppSidebar className="w-[200px]" />
-      <SidebarInset className="bg-gradient-to-b from-[#FCFCFC] to-[#D9E3EA]">
+      <SidebarInset className="bg-white">
         <Toaster richColors position="top-right" />
         <Header />
         {summary && (

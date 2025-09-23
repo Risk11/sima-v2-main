@@ -9,7 +9,7 @@ export default function MainLayout() {
             className="font-poppins"
         >
             <AppSidebar />
-            <SidebarInset className="flex flex-col h-screen bg-gradient-to-br from-blue-100 via-indigo-200 to-blue-300">
+            <SidebarInset className="flex flex-col h-screen bg-white">
                 <Header />
 
                 <main className="flex-grow overflow-y-auto">

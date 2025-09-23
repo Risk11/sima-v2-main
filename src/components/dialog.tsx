@@ -97,7 +97,7 @@ function DialogDemo<T extends Record<string, any> = Record<string, any>>({
           <Button
             onClick={() => setOpen(true)}
             variant="outline"
-            className={`flex items-center gap-2 flex-wrap px-3 py-2 ${buttonColor || "bg-blue-950 text-white hover:scale-95"}`}
+            className={`flex items-center gap-2 flex-wrap px-3 py-2 ${buttonColor || "bg-sky-500 text-white hover:scale-95"}`}
           >
             {Icon && <Icon className="w-5 h-5" />}
             <span>{label || button}</span>

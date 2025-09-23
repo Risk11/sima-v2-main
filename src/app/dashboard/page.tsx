@@ -159,9 +159,9 @@ const DashboardGrid = () => {
 
 export default function Page() {
   return (
-    <div className="bg-gradient-to-b from-[#FCFCFC] to-[#D9E3EA]">
+    <div className="bg-white">
       <SidebarProvider className="font-poppins">
-        <SidebarInset className="bg-gradient-to-b from-[#FCFCFC] to-[#D9E3EA] min-h-screen w-full px-6">
+        <SidebarInset className="bg-white min-h-screen w-full px-6">
           <DashboardGrid />
         </SidebarInset>
       </SidebarProvider>

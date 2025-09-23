@@ -122,7 +122,7 @@ export default function MasterAkun() {
   return (
     <SidebarProvider className="font-poppins">
       <AppSidebar className="w-[200px]" />
-      <SidebarInset className="bg-gradient-to-b from-[#FCFCFC] to-[#D9E3EA]">
+      <SidebarInset className="bg-white">
         <Header />
         <div>
           <div className="bg-white border border-[#E5E5E5] shadow-sm rounded-lg p-4 mx-5 my-5">

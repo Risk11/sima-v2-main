@@ -66,7 +66,7 @@ export default function RekapSUTR() {
   return (
     <SidebarProvider className="font-poppins">
       <AppSidebar className="w-[200px]" />
-      <SidebarInset className="bg-gradient-to-b from-[#FCFCFC] to-[#D9E3EA]">
+      <SidebarInset className="bg-white">
       <Header/>
 
         <div className="">
