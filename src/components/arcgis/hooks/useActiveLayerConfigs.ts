@@ -3,7 +3,7 @@ import { useArcGis } from '../context/ArcGisProvider';
 import { supplementaryLayerData } from '../../config';
 import { LayerConfig } from '../../../types';
 
-const BASE_URL = "https://dms.duniacommunica.co.id/gispro3/rest/services";
+const BASE_URL = "https://dms.duniacommunica.co.id/mapserver/rest/services";
 
 export function useActiveLayerConfigs(): LayerConfig[] {
     const { selectedService, layers: layersFromApi } = useArcGis();

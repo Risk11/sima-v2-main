@@ -91,7 +91,8 @@ export function ProfileDropdown() {
   const imageUrl = user.img
     ? (user.img.startsWith('http') ? user.img : `${apiUrl}/storage/${user.img}`)
     : undefined;
-
+  /* const avatarSrc = currentUser?.img_url || (currentUser?.img ? (currentUser.img.startsWith("http") ? currentUser.img : `${import.meta.env.VITE_API_URL}/storage/${currentUser.img}`) : "/avatar.png");
+  */
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -111,6 +112,7 @@ export function ProfileDropdown() {
       <DropdownMenuContent className="w-60 p-2 rounded-xl shadow-xl" align="end" forceMount>
         <DropdownMenuLabel className="font-normal px-2 pb-1">
           <div className="flex flex-col space-y-0.5">
+            {/* <img src={avatarSrc} alt="avatar" className="w-10 h-10 rounded-full shadow-sm object-cover border-2 border-white" /> */}
             <p className="text-sm font-medium leading-none truncate">{user.nama}</p>
             <p className="text-xs text-muted-foreground truncate">{user.email}</p>
           </div>

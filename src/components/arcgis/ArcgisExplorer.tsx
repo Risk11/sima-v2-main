@@ -48,7 +48,7 @@ export const ArcgisExplorer = () => {
 
             const featureLayers = layers.map(layerInfo => {
                 return new FeatureLayer({
-                    url: `https://dms.duniacommunica.co.id/gispro3/rest/services/${selectedService}/MapServer/${layerInfo.id}`,
+                    url: `https://dms.duniacommunica.co.id/mapserver/rest/services/${selectedService}/MapServer/${layerInfo.id}`,
                     title: layerInfo.name,
                     visible: layerInfo.defaultVisibility,
                     minScale: layerInfo.minScale,

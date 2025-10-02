@@ -4,7 +4,7 @@ import axios from "axios";
 import { ServiceInfo, LayerInfo, Feature, LayerDetails } from "../types";
 
 const arcgisApiClient = axios.create({
-    baseURL: "https://dms.duniacommunica.co.id/gispro3/rest/services",
+    baseURL: "https://dms.duniacommunica.co.id/mapserver/rest/services",
 });
 
 const handleApiError = (error: any, context: string) => {
