@@ -15,7 +15,9 @@ export default function DataTableHeader<TData>({
   filters?: Filters[],
   withUp3Filters?: boolean
 }) {
-  const { pageSize, globalFilter } = table.getState().pagination
+  const { pageSize } = table.getState().pagination;
+  const { globalFilter } = table.getState();
+
 
   const [search, setSearch] = useState(globalFilter ?? '')
   const [selectedDate, setSelectedDate] = useState<string>('')

@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import MainLayout from '@/components/MainLayout';
 
-import PetaDashboardPage from '@/app/peta-dashboard/page';
+import PetaDashboardPage from '../pages/PetaDashboardPage';
 import Page from '@/app/dashboard/page';
 import MasterAkun from '@/app/master-data/master-akun';
 import MasterGardu from '@/app/master-data/master-gardu';
@@ -29,13 +29,14 @@ import RekapSR from '@/app/rekapitulasi/sr';
 import RekapSUTR from '@/app/rekapitulasi/sutr';
 import UpdateKelengkapan from '@/app/update-kelengkapan/update-kelengkapan';
 import ValidasiGardu from '@/app/validasi/validasi-gardu';
-import ValidasiPelanggan from '@/app/validasi/validasi-pelanggan';
 import DetailPelanggan from '@/app/rekapitulasi/rekap-pelanggan/detail-pelanggan';
 import Profile from '@/app/Profile/profile';
 import Login from '@/components/login-form';
 import DataDuplikat from '@/app/menu-koordinator/data-duplikat';
-/* import PetaPage from '@/app/peta/page'; */
-import PetaJaringanPage from '@/app/peta-jaringan/page';
+import ValidasiPelangganV2Page from '@/app/validasi/page';
+import DataDuplicatePage from '@/app/data-duplikat/page';
+
+import ArcgisExplorerPage from '../pages/ArcgisExplorerPage';
 
 const Router = () => {
   return (
@@ -44,41 +45,43 @@ const Router = () => {
 
       <Route element={<MainLayout />}>
         <Route path='/' element={<Page />} />
+
+        <Route path='/arcgis-explorer' element={<ArcgisExplorerPage />} />
+
         <Route path='/peta' element={<PetaDashboardPage />} />
-        {/* <Route path='/peta' element={<PetaPage />} /> */}
+        <Route path='/updateKelengkapan' element={<UpdateKelengkapan />} />
+        <Route path='/menuValidasiGardu' element={<MenuValidasiGardu />} />
+        <Route path='/downloadFoto' element={<DownloadFoto />} />
+        <Route path='/jadwal' element={<Jadwal />} />
+        <Route path='/validasi' element={<ValidasiPelangganV2Page />} />
+        <Route path='/validasiGardu' element={<ValidasiGardu />} />
+        <Route path='/rekapAdmin' element={<RekapAdmin />} />
+        <Route path='/rekapSUTR' element={<RekapSUTR />} />
+        <Route path='/rekapSR' element={<RekapSR />} />
+        <Route path='/rekapRasio' element={<MasterRatio />} />
+        <Route path='/rekapGardu' element={<RekapGardu />} />
+        <Route path='/rekapTiang' element={<RekapTiang />} />
+        <Route path='/detailPelanggan' element={<DetailPelanggan />} />
+        <Route path='/rekapPelanggan' element={<Pelanggan />} />
+        <Route path='/masterAkun' element={<MasterAkun />} />
+        <Route path='/masterMCB' element={<MasterMCB />} />
+        <Route path='/masterKWH' element={<MasterKWH />} />
+        <Route path='/masterGardu' element={<MasterGardu />} />
+        <Route path='/masterUP3' element={<MasterUP3 />} />
+        <Route path='/Absensi' element={<Absensi />} />
+        <Route path='/DetailApk' element={<DetailApk />} />
+        <Route path='/Notifikasi' element={<Notifikasi />} />
+        <Route path='/masterULP' element={<MasterULP />} />
+        <Route path='/MasterRatio' element={<MasterRatio />} />
+        <Route path='/masterRole' element={<MasterRole />} />
+        <Route path='/MasterProject' element={<MasterProject />} />
+        <Route path='/detail/:id' element={<EditMenu />} />
+        <Route path='/masterMenu' element={<MasterMenu />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/dataDuplikat' element={<DataDuplikat />} />
+        <Route path='/geolocationAndro' element={<GeolocationAndroPage />} />
+        <Route path='/data-duplikat' element={<DataDuplicatePage />} />
       </Route>
-      <Route path='/peta-jaringan' element={<PetaJaringanPage />} />
-      <Route path='/menuValidasiGardu' element={<MenuValidasiGardu />} />
-      <Route path='/downloadFoto' element={<DownloadFoto />} />
-      <Route path='/jadwal' element={<Jadwal />} />
-      <Route path='/validasiPelanggan' element={<ValidasiPelanggan />} />
-      <Route path='/validasiGardu' element={<ValidasiGardu />} />
-      <Route path='/rekapAdmin' element={<RekapAdmin />} />
-      <Route path='/rekapSUTR' element={<RekapSUTR />} />
-      <Route path='/rekapSR' element={<RekapSR />} />
-      <Route path='/rekapRasio' element={<MasterRatio />} />
-      <Route path='/rekapGardu' element={<RekapGardu />} />
-      <Route path='/rekapTiang' element={<RekapTiang />} />
-      <Route path='/detailPelanggan' element={<DetailPelanggan />} />
-      <Route path='/rekapPelanggan' element={<Pelanggan />} />
-      <Route path='/masterAkun' element={<MasterAkun />} />
-      <Route path='/masterMCB' element={<MasterMCB />} />
-      <Route path='/masterKWH' element={<MasterKWH />} />
-      <Route path='/masterGardu' element={<MasterGardu />} />
-      <Route path='/masterUP3' element={<MasterUP3 />} />
-      <Route path='/Absensi' element={<Absensi />} />
-      <Route path='/DetailApk' element={<DetailApk />} />
-      <Route path='/Notifikasi' element={<Notifikasi />} />
-      <Route path='/masterULP' element={<MasterULP />} />
-      <Route path='/MasterRatio' element={<MasterRatio />} />
-      <Route path='/masterRole' element={<MasterRole />} />
-      <Route path='/MasterProject' element={<MasterProject />} />
-      <Route path='/detail/:id' element={<EditMenu />} />
-      <Route path='/masterMenu' element={<MasterMenu />} />
-      <Route path='/updateKelengkapan' element={<UpdateKelengkapan />} />
-      <Route path='/profile' element={<Profile />} />
-      <Route path='/dataDuplikat' element={<DataDuplikat />} />
-      <Route path='/geolocationAndro' element={<GeolocationAndroPage />} />
     </Routes>
   )
 }

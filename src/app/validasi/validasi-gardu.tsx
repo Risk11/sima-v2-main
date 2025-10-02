@@ -123,7 +123,7 @@ const columns: ColumnDef<ValidasiGardu>[] = [
                 sideOffset={5}
               >
                 Lihat Bukti
-            </TooltipContent>
+              </TooltipContent>
             </Tooltip>
 
             <Tooltip>
@@ -211,7 +211,7 @@ export default function ValidasiGardu() {
     console.log("Selected framework:", value);
   };
 
-  const fields=[
+  const fields = [
     {
       id: "keterangan",
       label: "Keterangan",
@@ -222,19 +222,19 @@ export default function ValidasiGardu() {
     <SidebarProvider className="font-poppins">
       <AppSidebar className="w-[200px] " />
       <SidebarInset className="bg-white">
-      <Header/>
-          <div className="flex gap-2 justify-center">
-            <CardTotal 
-              total="345.200" 
-              description="Total Pelanggan" 
-              textColor="text-white" 
-              className='bg-sky-300'/>
-            <CardTotal total="345" description="Total Dil" />
-            <CardTotal total="1.200" description="Total Data Tidak DIL" />
-            <CardTotal total="589" description="Total Data Dikunci" />
-            <CardTotal total="20.459" description="Total Data NIK" />
-            <CardTotal total="12" textColor="text-red-600" description="Total Data Belum Lengkap" />
-          </div>
+        <Header />
+        <div className="flex gap-2 justify-center">
+          <CardTotal
+            total="345.200"
+            description="Total Pelanggan"
+            textColor="text-white"
+            className='bg-sky-300' />
+          <CardTotal total="345" description="Total Dil" />
+          <CardTotal total="1.200" description="Total Data Tidak DIL" />
+          <CardTotal total="589" description="Total Data Dikunci" />
+          <CardTotal total="20.459" description="Total Data NIK" />
+          <CardTotal total="12" textColor="text-red-600" description="Total Data Belum Lengkap" />
+        </div>
 
         <div className="">
           <div className="bg-white border border-[#E5E5E5] shadow-sm rounded-lg p-4 mx-5 my-5">
@@ -259,49 +259,49 @@ export default function ValidasiGardu() {
                   button='Buat BA Gardu'
                   title='Buat BA Gardu'
                   fields={fields}>
-                  {(handleClose) => (
-                    <>                  
-                    <div className="grid grid-cols-5 items-center gap-4">
-                      <Label htmlFor="framework" className="text-left col-span-2">
-                        Tanggal
-                      </Label>
-                      <Combobox
-                        options={up3}
-                        placeholder="Pilih Tanggal"
-                        onSelect={handleUP3Select}
-                      />
-                    </div>
+                  {() => (
+                    <>
+                      <div className="grid grid-cols-5 items-center gap-4">
+                        <Label htmlFor="framework" className="text-left col-span-2">
+                          Tanggal
+                        </Label>
+                        <Combobox
+                          options={up3}
+                          placeholder="Pilih Tanggal"
+                          onSelect={handleUP3Select}
+                        />
+                      </div>
 
-                    <div className="grid grid-cols-5 items-center gap-4">
-                      <Label htmlFor="framework" className="text-left col-span-2">
-                        Surveyor
-                      </Label>
-                      <Combobox
-                        options={up3}
-                        placeholder="Pilih Surveyor"
-                        onSelect={handleUP3Select}
-                      />
-                    </div>
+                      <div className="grid grid-cols-5 items-center gap-4">
+                        <Label htmlFor="framework" className="text-left col-span-2">
+                          Surveyor
+                        </Label>
+                        <Combobox
+                          options={up3}
+                          placeholder="Pilih Surveyor"
+                          onSelect={handleUP3Select}
+                        />
+                      </div>
 
-                    <div className="grid grid-cols-5 items-center gap-4">
-                      <Label htmlFor="framework" className="text-left col-span-2">
-                        Nama Gardu
-                      </Label>
-                      <Combobox
-                        options={up3}
-                        placeholder="Pilih Nama Gardu"
-                        onSelect={handleUP3Select}
-                      />
-                    </div>
-                  </>
+                      <div className="grid grid-cols-5 items-center gap-4">
+                        <Label htmlFor="framework" className="text-left col-span-2">
+                          Nama Gardu
+                        </Label>
+                        <Combobox
+                          options={up3}
+                          placeholder="Pilih Nama Gardu"
+                          onSelect={handleUP3Select}
+                        />
+                      </div>
+                    </>
                   )}
-                   
+
                 </DialogDemo>
               </div>
             </div>
-              <div className="mt-5">
-                <DataTable columns={columns} data={data} />
-              </div>
+            <div className="mt-5">
+              <DataTable columns={columns} data={data} />
+            </div>
           </div>
         </div>
       </SidebarInset>

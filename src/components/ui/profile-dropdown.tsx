@@ -2,7 +2,7 @@
 
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { Link, useNavigate } from "react-router-dom";
-import { LogOut, User as UserIcon, Loader2, UserCog } from "lucide-react";
+import { LogOut, User as Loader2, UserCog } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {

@@ -1,0 +1,12 @@
+/* Pastikan ini ada di baris paling atas file CSS global kamu */
+@import "@arcgis/core/assets/esri/themes/light/main.css";
+
+/* Kode Tailwind CSS kamu */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Style kustom lainnya */
+body {
+  /* ... */
+}

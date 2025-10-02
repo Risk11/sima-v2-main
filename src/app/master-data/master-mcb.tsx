@@ -3,14 +3,11 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { ColumnDef } from "@tanstack/react-table";
 import { Delete, Edit } from "lucide-react";
 import type { Field } from "@/components/dialog";
-
 import apiService from "@/services/api-services";
-
-import { AppSidebar } from "@/components/app-sidebar";
 import DialogDemo from "@/components/dialog";
 import { DataTable } from "@/components/data-table";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
-import Header from "../dashboard/header";
+
 
 export type MCB = {
   id: number;
@@ -102,9 +99,9 @@ export default function MasterMCB() {
 
   return (
     <SidebarProvider className="font-poppins">
-      <AppSidebar className="w-[200px]" />
+      {/* <AppSidebar className="w-[200px]" /> */}
       <SidebarInset className="bg-white">
-        <Header />
+        {/* <Header /> */}
         <div>
           <div className="bg-white border border-[#E5E5E5] shadow-sm rounded-lg p-4 mx-5 my-5">
             <div className="flex justify-between items-center">

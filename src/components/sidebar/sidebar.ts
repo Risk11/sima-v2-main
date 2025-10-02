@@ -11,24 +11,19 @@ import {
   Lock,
 } from "lucide-react"
 
-// type MenuItem = {
-//   title: string;
-//   url: string;
-// };
-
-// type SidebarMenuItem = {
-//   title: string;
-//   url?: string;
-//   icon?: LucideIcon;
-//   items?: MenuItem[];
-// };
-
 export const sidebarMenu = [
   {
     title: 'Dashboard',
     url: '/',
     icon: LayoutDashboardIcon,
   },
+
+  {
+    title: 'ArcGIS Explorer',
+    url: '/arcgis-explorer',
+    icon: Map,
+  },
+
   {
     title: 'Update Kelengkapan',
     url: '/updateKelengkapan',
@@ -36,7 +31,7 @@ export const sidebarMenu = [
   },
   {
     title: 'Peta Hasil Survey',
-    url: '/peta',
+    url: '#',
     icon: Map,
   },
   {
@@ -51,13 +46,10 @@ export const sidebarMenu = [
     items: [
       { title: 'Menu', url: '/masterMenu' },
       { title: 'project', url: '/MasterProject' },
-      /*  { title: 'Role', url: '/masterRole' }, */
       { title: 'Akun', url: '/masterAkun' },
-      /* { title: 'Master Rasio', url: '/MasterRatio' }, */
       { title: 'Detail APK', url: '/DetailApk' },
       { title: 'ULP', url: '/masterULP' },
       { title: 'UP3', url: '/masterUP3' },
-      /* { title: 'Master Gardu', url: '/masterGardu' }, */
       { title: 'Tambah Merk KWH', url: '/masterKWH' },
       { title: 'Tambah Merk MCB', url: '/masterMCB' },
       { title: "Geolocation Andro", url: "/geolocationAndro" },
@@ -84,9 +76,11 @@ export const sidebarMenu = [
     url: '#',
     icon: CheckCheckIcon,
     items: [
-      { title: 'Validasi Pelanggan', url: '/validasiPelanggan' },
+      /* { title: 'Validasi Pelanggan', url: '/validasiPelanggan' }, */
+      { title: 'Validasi Pelanggan', url: '/validasi' },
       { title: 'Validasi BA Gardu', url: '/validasiGardu' },
       { title: 'Approved QC', url: '#' },
+      { title: 'Data Duplicate', url: '/data-duplikat' },
     ],
   },
   {
@@ -97,7 +91,6 @@ export const sidebarMenu = [
       { title: 'Jadwal', url: '/jadwal' },
       { title: 'Download Foto', url: '/downloadFoto' },
       { title: 'Validasi Gardu', url: '/menuValidasiGardu' },
-      { title: 'Data Duplikat', url: '/dataDuplikat' },
     ],
   },
   {
@@ -114,8 +107,7 @@ export const sidebarMenu = [
     url: '#',
     icon: MapPin,
     items: [
-      { title: 'Inspeksi Pohon', url: '/peta' },
-      /* { title: 'Peta Jaringan', url: '/peta-jaringan' }, */
+      { title: 'Peta Survey', url: '/peta' },
     ],
   },
 ]

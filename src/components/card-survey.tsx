@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import CardTotal from "./ui/card-total";
 import { apiService } from "@/services/api-services";
 
@@ -44,7 +44,7 @@ export default function CardSurvey() {
     return <div className="p-4 text-center text-red-500">Error: {error}</div>;
   }
 
-  const userName = user?.name || 'Pengguna';
+  /* const userName = user?.name || 'Pengguna'; */
   const userRole = user?.role || 'Superadmin';
 
   return (

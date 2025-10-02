@@ -1,0 +1,154 @@
+:root {
+    --primary-color: #007bff;
+    --primary-hover-color: #0056b3;
+    --text-color: #212529;
+    --light-text-color: #6c757d;
+    --background-color: #f8f9fa;
+    --container-bg-color: #ffffff;
+    --border-color: #dee2e6;
+    --input-bg-color: #ffffff;
+    --error-bg-color: #f8d7da;
+    --error-text-color: #721c24;
+    --error-border-color: #f5c6cb;
+}
+
+.aec-container {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    background-color: var(--container-bg-color);
+    color: var(--text-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+}
+
+.aec-header h1 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+.aec-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    align-items: flex-end;
+}
+
+.aec-selector-group,
+.aec-filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.aec-selector-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: left;
+    color: var(--light-text-color);
+}
+
+/* Desain ulang untuk Input & Select */
+.aec-selector-group select,
+.aec-filter-container input {
+    min-width: 280px;
+    padding: 0.75em 1.2em;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.aec-selector-group select:focus,
+.aec-filter-container input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.aec-filter-container button {
+    border-radius: 8px;
+    border: none;
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.aec-filter-container button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.aec-filter-container button:disabled,
+.aec-selector-group select:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.aec-error {
+    background-color: var(--error-bg-color);
+    color: var(--error-text-color);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--error-border-color);
+    margin-bottom: 1rem;
+}
+
+.aec-message {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--light-text-color);
+    background-color: var(--background-color);
+    border-radius: 8px;
+}
+
+.aec-table-wrapper {
+    max-height: 65vh;
+    overflow: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.aec-table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.aec-table-wrapper th,
+.aec-table-wrapper td {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.aec-table-wrapper th {
+    background-color: var(--background-color);
+    position: sticky;
+    top: 0;
+    font-weight: 600;
+    color: var(--text-color);
+    border-bottom-width: 2px;
+}
+
+.aec-table-wrapper tbody tr:nth-of-type(odd) {
+    background-color: var(--background-color);
+}
+
+.aec-table-wrapper tbody tr:hover {
+    background-color: #e9ecef;
+}
